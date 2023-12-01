@@ -1,0 +1,108 @@
+/* styles.css */
+@font-face { font-family: Sanz; src: url('RNSSanz-Normal.otf'); }
+body {
+    position: relative; /* Make the body a positioning context for absolute positioning */
+    font-family: 'Sanz', monospace;
+    margin-top: 10%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#schedule {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+    margin: auto;
+}
+
+.day {
+    position: relative;
+    margin-right: 40px;
+}
+#monday, #tuesday, #thursday, #friday{
+    border-bottom: 2px solid black;
+}
+
+#addButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #04e726;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#formContainer {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 300px; /* Adjust the width as needed */
+    max-height: 80vh; /* Set a maximum height for the form container */
+    overflow-y: auto;
+}
+
+#formContainer h2 {
+    margin-bottom: 20px;
+    
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+label {
+    margin-bottom: 8px;
+}
+
+input,
+select,
+button {
+    margin-bottom: 16px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #04e726;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #04e726;
+}
+.schedule-item {
+    background-color: #ffffff;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    border-radius: 8px; 
+    color: black;
+}
+.teacher-time {
+    display: flex;
+    justify-content: space-between;
+}
+.type-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    padding: 5px;
+    border-top-right-radius: 8px;
+}
+
